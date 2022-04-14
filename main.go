@@ -140,6 +140,13 @@ func removeInternalPkg(libs []string) []string {
 //        <span class="go-textSubtle">Imported by: </span>19,638
 //     </a>
 //   </span>
+//
+//   SPAN
+//     TEXT
+//     A
+//       TEXT
+//       SPAN
+//       TEXT
 func extractImportedBy(n *html.Node) string {
 	if n.Type == html.ElementNode && n.Data == "span" {
 		for _, attr := range n.Attr {
